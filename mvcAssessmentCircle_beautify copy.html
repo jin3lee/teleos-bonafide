@@ -1180,13 +1180,11 @@
                 // 1. get the unique CLASSNAME from the parameter
                 const collarName = e;
                 
-                console.log("1...searching through all collars (", collarArr.length, ").includes(", collarName, ")");
                 // 2. find corresponding collar name from the leash name
                 for (var i = 0; i < collarArr.length; i++) {
                     
                     // get current collar name
                     let currentCollarName = collarArr[i].className;
-                    console.log("2........", currentCollarName, "==", collarName);
                     // display collar with matching name
                     if( currentCollarName.includes( collarName ) || currentCollarName.includes( collarName.toLowerCase() ) ) {
                         collarArr[i].style.display = "block";     
