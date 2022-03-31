@@ -1,0 +1,91 @@
+<script>
+     
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        var jim100 = getElementByClassName("jim-100");
+        var jim50 = getElementByClassName("jim-50");
+        var george100 = getElementByClassName("george-100");
+        var george50 = getElementByClassName("george-50");
+
+        // hide based on states
+        const state = {
+            JIM_ACTIVE: "JIM_ACTIVE",
+            GEORGE_ACTIVE: "GEORGE_ACTIVE",
+        }
+
+        // set default state
+        var currentState = state.JIM_ACTIVE;
+        
+        console.log("shown",jim50);
+        jim50.map(e => {
+            e.addEventListener("mouseover", function() {
+                console.log("taco 2.2");
+                updateState(state.JIM_ACTIVE);
+                console.log("jim50 hover");
+            })
+        });
+
+        george50.map(e => {
+            e.addEventListener("mouseover", function() {
+                updateState(state.GEORGE_ACTIVE);
+
+                console.log("george50 hover");
+            })
+        });
+
+        function getElementByClassName( classNameAsString ) {
+            // search for element
+            var searchArray = document.getElementsByClassName( classNameAsString );
+
+            // create variable ID
+            let elementID = -1;
+
+            // compare search results with classNameAsString
+            for( let id in searchArray ) {
+                // case: found the correct string
+                if( searchArray[id].className.includes(classNameAsString) ) {
+                    elementID = id;
+                    break;
+                }
+            }
+
+            // return element if found
+            if( elementID != -1 ) {
+                return searchArray[ elementID ];
+            }
+
+            // otherwise return null
+            return null;
+        }
+       
+      
+      
+
+        function updateState( state ) {
+            if( JIM_ACTIVE == state ) {
+                // hide george 100
+                george100.style.display = "none";
+                // show george 50
+                george50.style.display = "block";
+
+                // show jim 100
+                jim100.style.display = "block";
+                // hide jim 50
+                jim50.style.display = "none";
+
+            } else {
+                // hide jim 100
+                jim100.style.display = "none";
+                // show jim 50
+                jim50.style.display = "block";
+
+
+                // show george 100
+                george100.style.display = "block";
+                // hide george 50
+                george50.style.display = "none";
+            }
+        }
+
+    });
+</script>
