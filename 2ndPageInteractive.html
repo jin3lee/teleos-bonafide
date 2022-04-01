@@ -166,6 +166,7 @@
             }
             .patientIcon {
                 fill: #FFF;
+                cursor: pointer;
             }
             
             .star {
@@ -438,7 +439,11 @@
             var path = url2[1].split('/');
             const urlAndSlug = url2[0] + "/" + path[0] + "/";
 
-
+            function scrollTo(hash) {
+                document.getElementById( hash ).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
 
             function initEventListeners() {
                 patientButton.map(e => {
@@ -451,7 +456,7 @@
                         currentActiveButton = allOptions.PATIENT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#intake";
+                        scrollTo("intake");
                     })
                 })
                 patientButton.map(e => {
@@ -464,7 +469,7 @@
                         currentActiveButton = allOptions.PATIENT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#intake";
+                        scrollTo("intake");
                     })
                 })
 
@@ -479,7 +484,7 @@
                         currentActiveButton = allOptions.BILLING;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#billing";
+                        scrollTo("billing");
                     })
                 })
                 billingIcon.map(e => {
@@ -492,7 +497,7 @@
                         currentActiveButton = allOptions.BILLING;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#billing";
+                        scrollTo("billing");
                     })
                 })
 
@@ -507,7 +512,7 @@
                         currentActiveButton = allOptions.REVENUE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#revenue";
+                        scrollTo("revenue");
                     })
                 })
                 revenueIcon.map(e => {
@@ -520,7 +525,7 @@
                         currentActiveButton = allOptions.REVENUE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#revenue";
+                        scrollTo("revenue");
                     })
                 })
 
@@ -535,7 +540,7 @@
                         currentActiveButton = allOptions.DOCUMENTATION;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#documentation";
+                        scrollTo("documentation");
                     })
                 })
                 documentationIcon.map(e => {
@@ -548,7 +553,7 @@
                         currentActiveButton = allOptions.DOCUMENTATION;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#documentation";
+                        scrollTo("documentation");
                     })
                 })
 
@@ -562,7 +567,7 @@
                         currentActiveButton = allOptions.SUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#supply";
+                        scrollTo("supply");
                     })
                 })
                 supplyIcon.map(e => {
@@ -575,7 +580,7 @@
                         currentActiveButton = allOptions.SUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#supply";
+                        scrollTo("supply");
                     })
                 })
 
@@ -590,7 +595,7 @@
                         currentActiveButton = allOptions.INVENTORY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#inventory";
+                        scrollTo("inventory");
                     })
                 })
                 inventoryIcon.map(e => {
@@ -603,7 +608,7 @@
                         currentActiveButton = allOptions.INVENTORY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#inventory";
+                        scrollTo("inventory");
                     })
                 })
 
@@ -617,7 +622,7 @@
                         currentActiveButton = allOptions.DELIVERY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#delivery";
+                        scrollTo("delivery");
                     })
                 })
                 deliveryIcon.map(e => {
@@ -630,7 +635,7 @@
                         currentActiveButton = allOptions.DELIVERY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#delivery";
+                        scrollTo("delivery");
                     })
                 })
 
@@ -645,7 +650,7 @@
                         currentActiveButton = allOptions.ORDER;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#order";
+                        scrollTo("order");
                     })
                 })
                 orderIcon.map(e => {
@@ -658,7 +663,7 @@
                         currentActiveButton = allOptions.ORDER;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#order";
+                        scrollTo("order");
                     })
                 })
 
@@ -673,7 +678,7 @@
                         currentActiveButton = allOptions.HOSPICE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#hospice";
+                        scrollTo("hospice");
                     })
                 })
                 hospiceIcon.map(e => {
@@ -686,7 +691,7 @@
                         currentActiveButton = allOptions.HOSPICE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#hospice";
+                        scrollTo("hospice");
                     })
                 })
 
@@ -700,7 +705,7 @@
                         currentActiveButton = allOptions.RESUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#resupply";
+                        scrollTo("resupply");
                     })
                 })
                 resupplyIcon.map(e => {
@@ -713,7 +718,7 @@
                         currentActiveButton = allOptions.RESUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#resupply";
+                        scrollTo("resupply");
                     })
                 })
 
@@ -728,7 +733,7 @@
                         currentActiveButton = allOptions.POINT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#point";
+                        scrollTo("point");
                     })
                 })
                 pointIcon.map(e => {
@@ -741,7 +746,7 @@
                         currentActiveButton = allOptions.POINT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#point";
+                        scrollTo("point");
                     })
                 })
 
@@ -756,7 +761,7 @@
                         currentActiveButton = allOptions.API;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#api";
+                        scrollTo("api");
                     })
                 })
                 apiIcon.map(e => {
@@ -769,7 +774,7 @@
                         currentActiveButton = allOptions.API;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        window.location = urlAndSlug + "/#api";
+                        scrollTo("api");
                     })
                 })
             }
