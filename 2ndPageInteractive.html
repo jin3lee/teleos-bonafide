@@ -432,18 +432,13 @@
             var currentHover = allOptions.EMPTY;
 
 
-            var url = window.location.href;
-            console.log(url);
-            var url2 = url.split('.com/');
-            url2[0] += ".com";
-            var path = url2[1].split('/');
-            const urlAndSlug = url2[0] + "/" + path[0] + "/";
-
-            function scrollTo(hash) {
-                document.getElementById( hash ).scrollIntoView({
-                    behavior: 'smooth'
-                });
+            function scrollTo( hash ) {
+                let yOffset = -100; 
+                let element = document.getElementById(hash);
+                let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
             }
+
 
             function initEventListeners() {
                 patientButton.map(e => {
@@ -456,7 +451,7 @@
                         currentActiveButton = allOptions.PATIENT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("cannon");
+                        scrollTo("intake2");
                     })
                 })
                 patientButton.map(e => {
@@ -469,8 +464,7 @@
                         currentActiveButton = allOptions.PATIENT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("cannon");
-                        // scrollTo("intake");
+                        scrollTo("intake2");
                     })
                 })
 
@@ -485,7 +479,7 @@
                         currentActiveButton = allOptions.BILLING;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("billing");
+                        scrollTo("billing2");
                     })
                 })
                 billingIcon.map(e => {
@@ -498,7 +492,7 @@
                         currentActiveButton = allOptions.BILLING;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("billing");
+                        scrollTo("billing2");
                     })
                 })
 
@@ -513,7 +507,7 @@
                         currentActiveButton = allOptions.REVENUE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("revenue");
+                        scrollTo("revenue2");
                     })
                 })
                 revenueIcon.map(e => {
@@ -526,7 +520,7 @@
                         currentActiveButton = allOptions.REVENUE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("revenue");
+                        scrollTo("revenue2");
                     })
                 })
 
@@ -541,7 +535,7 @@
                         currentActiveButton = allOptions.DOCUMENTATION;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("documentation");
+                        scrollTo("documentation2");
                     })
                 })
                 documentationIcon.map(e => {
@@ -554,7 +548,7 @@
                         currentActiveButton = allOptions.DOCUMENTATION;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("documentation");
+                        scrollTo("documentation2");
                     })
                 })
 
@@ -568,7 +562,7 @@
                         currentActiveButton = allOptions.SUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("supply");
+                        scrollTo("supply2");
                     })
                 })
                 supplyIcon.map(e => {
@@ -581,7 +575,7 @@
                         currentActiveButton = allOptions.SUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("supply");
+                        scrollTo("supply2");
                     })
                 })
 
@@ -596,7 +590,7 @@
                         currentActiveButton = allOptions.INVENTORY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("inventory");
+                        scrollTo("inventory2");
                     })
                 })
                 inventoryIcon.map(e => {
@@ -609,7 +603,7 @@
                         currentActiveButton = allOptions.INVENTORY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("inventory");
+                        scrollTo("inventory2");
                     })
                 })
 
@@ -623,7 +617,7 @@
                         currentActiveButton = allOptions.DELIVERY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("delivery");
+                        scrollTo("delivery2");
                     })
                 })
                 deliveryIcon.map(e => {
@@ -636,7 +630,7 @@
                         currentActiveButton = allOptions.DELIVERY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("delivery");
+                        scrollTo("delivery2");
                     })
                 })
 
@@ -651,7 +645,7 @@
                         currentActiveButton = allOptions.ORDER;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("order");
+                        scrollTo("order2");
                     })
                 })
                 orderIcon.map(e => {
@@ -664,7 +658,7 @@
                         currentActiveButton = allOptions.ORDER;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("order");
+                        scrollTo("order2");
                     })
                 })
 
@@ -679,7 +673,7 @@
                         currentActiveButton = allOptions.HOSPICE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("hospice");
+                        scrollTo("hospice2");
                     })
                 })
                 hospiceIcon.map(e => {
@@ -692,7 +686,7 @@
                         currentActiveButton = allOptions.HOSPICE;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("hospice");
+                        scrollTo("hospice2");
                     })
                 })
 
@@ -706,7 +700,7 @@
                         currentActiveButton = allOptions.RESUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("resupply");
+                        scrollTo("resupply2");
                     })
                 })
                 resupplyIcon.map(e => {
@@ -719,7 +713,7 @@
                         currentActiveButton = allOptions.RESUPPLY;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("resupply");
+                        scrollTo("resupply2");
                     })
                 })
 
@@ -734,7 +728,7 @@
                         currentActiveButton = allOptions.POINT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("point");
+                        scrollTo("point2");
                     })
                 })
                 pointIcon.map(e => {
@@ -747,7 +741,7 @@
                         currentActiveButton = allOptions.POINT;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("point");
+                        scrollTo("point2");
                     })
                 })
 
@@ -762,7 +756,7 @@
                         currentActiveButton = allOptions.API;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("api");
+                        scrollTo("api2");
                     })
                 })
                 apiIcon.map(e => {
@@ -775,7 +769,7 @@
                         currentActiveButton = allOptions.API;
                         hoverLeaveAllExceptHover();
                         showCollars( currentActiveButton );
-                        scrollTo("api");
+                        scrollTo("api2");
                     })
                 })
             }
